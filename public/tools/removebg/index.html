@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/public/proxy/proxy.js"></script>
+<title>Remove BG &amp; Upscale — Nugroho Dev</title><meta name="description" content="Hapus background atau perbesar resolusi gambar.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>:root{--ink:#111;--bg:#fff8e7;--y:#ffe14d;--p:#ff7eb6;--b:#6ab7ff;--g:#6ee7a8;--o:#ff9f5a;--v:#b79bff;--sh:6px 6px 0 var(--ink);--fs:"Space Grotesk",system-ui,sans-serif;--fm:"Space Mono",ui-monospace,monospace}*{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:var(--bg);color:var(--ink);font:500 1rem/1.5 var(--fs);background-image:radial-gradient(#11111122 1.2px,transparent 1.2px);background-size:22px 22px}a{color:inherit}.wrap{max-width:1100px;margin:0 auto;padding:0 18px}.top{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:var(--y);border-bottom:4px solid var(--ink)}.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.04em;text-decoration:none}.brand span{display:grid;place-items:center;width:34px;height:34px;background:var(--ink);color:var(--y);border-radius:6px;font-family:var(--fm)}.btn{display:inline-block;font:700 1rem var(--fs);padding:12px 20px;background:var(--p);color:var(--ink);border:3px solid var(--ink);box-shadow:var(--sh);text-decoration:none;cursor:pointer;transition:transform .08s,box-shadow .08s}.btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}.btn:active{transform:translate(6px,6px);box-shadow:0 0 0 var(--ink)}.btn:disabled{opacity:.6;cursor:wait}.btn.sm{padding:6px 14px;font-size:.9rem;box-shadow:3px 3px 0 var(--ink);background:#fff}.btn.dl{background:var(--g);margin:6px 10px 6px 0;font-size:.95rem;padding:9px 16px;max-width:100%;overflow-wrap:anywhere}.hero{padding:56px 0 44px}.hero h1{font-size:clamp(2.8rem,9vw,6rem);line-height:.95;margin:18px 0;letter-spacing:-.03em;text-transform:uppercase}.hero h1 em{font-style:normal;background:var(--b);padding:0 .15em;border:4px solid var(--ink);box-shadow:var(--sh);display:inline-block;transform:rotate(-2deg)}.hero p{max-width:560px;font-size:1.15rem;margin:0 0 24px}.tag{display:inline-block;font:700 .8rem var(--fm);text-transform:uppercase;padding:4px 10px;background:var(--ink);color:#fff}.tag.rot{background:var(--v);color:var(--ink);border:3px solid var(--ink);transform:rotate(-3deg);box-shadow:3px 3px 0 var(--ink)}.marq{overflow:hidden;white-space:nowrap;background:var(--ink);color:var(--y);border-block:4px solid var(--ink);font:700 1.05rem var(--fm);padding:10px 0;margin-bottom:40px}.marq div{display:inline-block;animation:mq 60s linear infinite}.marq .mi{width:1.5em;height:1.5em;object-fit:contain;vertical-align:-.4em;margin-right:2px;padding:2px;background:#fff;border:2px solid #fff}@keyframes mq{to{transform:translateX(-50%)}}.bar{display:flex;flex-direction:column;gap:14px;margin-bottom:26px}#s,input[type=text],input[type=file],select{width:100%;font:500 1rem var(--fm);padding:12px 14px;background:#fff;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);outline:none;border-radius:0}#s:focus,input:focus,select:focus{background:#fffbd1}a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}input[type=file]{padding:8px;cursor:pointer}input[type=file]::file-selector-button{font:700 .9rem var(--fs);padding:8px 14px;margin-right:12px;background:var(--p);color:var(--ink);border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink);cursor:pointer}input[type=file]::file-selector-button:hover{background:var(--y)}.sel{position:relative}.sel-native{display:none}.sel-btn{position:relative;display:block;width:100%;min-height:52px;text-align:left;font:500 1rem var(--fm);color:var(--ink);padding:12px 46px 12px 14px;background:#fff;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);border-radius:0;cursor:pointer;overflow-wrap:anywhere;transition:transform .08s,box-shadow .08s}.sel-btn::after{content:"";position:absolute;right:14px;top:50%;margin-top:-4px;border:7px solid transparent;border-top-color:var(--ink);border-bottom-width:0;transition:transform .12s}.sel-btn:hover{background:#fffbd1}.sel-btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}.sel-btn:disabled{opacity:.6;cursor:not-allowed}.sel.open .sel-btn{background:var(--y);transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}.sel.open .sel-btn::after{transform:rotate(180deg)}.sel-list{position:absolute;left:0;right:0;top:calc(100% + 8px);z-index:30;margin:0;padding:0;list-style:none;max-height:min(260px,50vh);overflow-y:auto;overscroll-behavior:contain;background:#fff;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink)}.sel.up .sel-list{top:auto;bottom:calc(100% + 8px)}.sel-opt{padding:11px 14px;font:500 .95rem var(--fm);border-bottom:2px solid var(--ink);cursor:pointer;overflow-wrap:anywhere}.sel-opt:last-child{border-bottom:0}.sel-opt.act{background:var(--y);box-shadow:inset 6px 0 0 var(--p)}.sel-opt[aria-selected=true]{background:var(--ink);color:var(--y)}.sel-opt[aria-selected=true]::before{content:"✓ "}.sel-opt[aria-selected=true].act{box-shadow:inset 6px 0 0 var(--p)}.chips{display:flex;flex-wrap:wrap;gap:10px}.chip{font:700 .85rem var(--fs);padding:7px 14px;background:#fff;border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink);cursor:pointer}.chip.on{background:var(--ink);color:var(--y)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;margin-bottom:56px}.card{background:#fff;border:4px solid var(--ink);box-shadow:var(--sh);padding:18px}.c-y{background:var(--y)}.c-p{background:var(--p)}.c-b{background:var(--b)}.c-g{background:var(--g)}.c-o{background:var(--o)}.c-v{background:var(--v)}.tool{display:flex;flex-direction:column;gap:6px;text-decoration:none;transition:transform .1s,box-shadow .1s}.tool:hover{transform:translate(-4px,-4px) rotate(-.6deg);box-shadow:10px 10px 0 var(--ink)}.ico img{display:block;width:100%;height:100%;object-fit:contain;padding:5px}.tool .ico{font-size:2rem;width:56px;height:56px;display:grid;place-items:center;background:#fff;border:3px solid var(--ink)}.tool h3{margin:8px 0 0;font-size:1.2rem}.tool p{margin:0;font-size:.95rem;flex:1}.go{font:700 .85rem var(--fm);margin-top:6px}.empty{text-align:center;font-weight:700;font-size:1.2rem;margin:40px 0}.back{display:inline-block;margin:26px 0 18px;font:700 .9rem var(--fm)}.hero-tool{display:flex;gap:18px;align-items:center;margin-bottom:26px}.hero-tool .ico{font-size:3rem;background:#fff;border:3px solid var(--ink);width:84px;height:84px;display:grid;place-items:center;flex:none}.hero-tool>div:last-child{min-width:0}.hero-tool h1{margin:8px 0 4px;font-size:clamp(1.6rem,5vw,2.4rem);line-height:1.1}.hero-tool p{margin:0}form.card{display:flex;flex-direction:column;gap:18px;margin-bottom:26px}.field{display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}.field label{font:700 .85rem var(--fm);text-transform:uppercase}.hint{font:400 .8rem var(--fm);opacity:.75}.row{display:flex;gap:16px;flex-wrap:wrap}.row .field{flex:1 1 160px}.res{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:20px;align-items:start}.res>div{min-width:0}.res img,.res video{width:100%;border:3px solid var(--ink);background:#eee;display:block}.res h2{margin:0 0 6px;font-size:1.4rem;overflow-wrap:anywhere}.meta{font:400 .9rem var(--fm);margin:0 0 12px;overflow-wrap:anywhere}.kv{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:.92rem}.kv td{border:2px solid var(--ink);padding:6px 10px;vertical-align:top;overflow-wrap:anywhere}.kv td:first-child{font-weight:700;background:var(--y)}.err{background:#ff6b6b;color:#111;overflow-wrap:anywhere}.err b{font-family:var(--fm)}.load{font:700 1.1rem var(--fm)}.load::after{content:"";display:inline-block;width:1.1em;height:1.1em;margin-left:10px;border:4px solid var(--ink);border-right-color:transparent;border-radius:50%;vertical-align:-3px;animation:sp .8s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}.foot{margin-top:60px;padding:24px 18px;background:var(--ink);color:#fff;text-align:center;font:500 .9rem var(--fm)}.foot b{color:var(--y)}.foot span{display:block;margin-top:6px;opacity:.7;font-size:.8rem}@media(max-width:640px){.res{grid-template-columns:1fr}.hero-tool{flex-direction:column;align-items:flex-start}}@media(prefers-reduced-motion:reduce){.marq div{animation:none}html{scroll-behavior:auto}.btn,.tool,.sel-btn,.sel-btn::after{transition:none}}</style></head><body><header class="top"><a class="brand" href="/public/"><span>N</span>NUGROHO DEV</a><a class="btn sm" href="/public/#tools">Semua Tools</a></header>
+<main class="wrap" data-tool="removebg" data-kind="image">
+<a class="back" href="/public/#tools">← Kembali ke menu</a>
+<section class="card c-p hero-tool"><div class="ico"><img src="/public/icons/removebg.webp" alt="" width="192" height="192" decoding="async"></div><div><span class="tag">Gambar</span><h1>Remove BG &amp; Upscale</h1><p>Hapus background atau perbesar resolusi gambar.</p></div></section>
+<form id="f" class="card" novalidate><div class="field"><label for="img">Gambar (PNG/JPG/WEBP, maks ~3MB)</label><input id="img" type="file" accept="image/png,image/jpeg,image/webp"></div>
+<div class="row"><div class="field"><label for="mode">Mode</label><select id="mode"><option value="removebg">Hapus Background</option><option value="upscale">Upscale</option></select></div>
+<div class="field"><label for="scale">Skala (upscale)</label><select id="scale"><option>2</option><option>4</option><option>8</option></select></div></div><input id="hp-field" name="hp-field" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0"><button class="btn" id="go" type="submit">Proses →</button></form>
+<div id="out" aria-live="polite"></div>
+</main><footer class="foot"><b>© 2026 Nugroho Dev</b> — Dev Nugroho Y.R. Dev<span>Gunakan untuk keperluan pribadi &amp; hormati hak cipta pemilik konten.</span></footer><script>(() => {
+const make = (tag, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; return e; };
+document.querySelectorAll("select").forEach((native) => {
+const key = native.id || "sel" + Math.random().toString(36).slice(2, 7);
+const label = native.id ? document.querySelector('label[for="' + native.id + '"]') : null;
+const wrap = make("div", "sel");
+const btn = make("button", "sel-btn");
+const list = make("ul", "sel-list");
+let act = Math.max(0, native.selectedIndex);
+let typed = "", typedAt = 0;
+btn.type = "button";
+btn.id = key + "-btn";
+btn.disabled = native.disabled;
+btn.setAttribute("role", "combobox");
+btn.setAttribute("aria-haspopup", "listbox");
+btn.setAttribute("aria-expanded", "false");
+btn.setAttribute("aria-controls", key + "-list");
+list.id = key + "-list";
+list.setAttribute("role", "listbox");
+list.hidden = true;
+if (label) {
+label.id = label.id || key + "-label";
+btn.setAttribute("aria-labelledby", label.id);
+label.addEventListener("click", () => btn.focus());
+}
+const opts = [...native.options].map((o, i) => {
+const li = make("li", "sel-opt");
+li.id = key + "-o" + i;
+li.setAttribute("role", "option");
+li.textContent = o.textContent;
+list.append(li);
+return li;
+});
+const sync = () => {
+const cur = native.options[native.selectedIndex];
+btn.textContent = cur ? cur.textContent : "";
+opts.forEach((li, i) => li.setAttribute("aria-selected", String(i === native.selectedIndex)));
+};
+const setAct = (i) => {
+act = Math.max(0, Math.min(opts.length - 1, i));
+opts.forEach((li, k) => li.classList.toggle("act", k === act));
+btn.setAttribute("aria-activedescendant", opts[act].id);
+const el = opts[act];
+if (el.offsetTop < list.scrollTop) list.scrollTop = el.offsetTop;
+else if (el.offsetTop + el.offsetHeight > list.scrollTop + list.clientHeight) list.scrollTop = el.offsetTop + el.offsetHeight - list.clientHeight;
+};
+const open = () => {
+if (!list.hidden || btn.disabled) return;
+const r = btn.getBoundingClientRect();
+const below = window.innerHeight - r.bottom;
+wrap.classList.toggle("up", below < 270 && r.top > below);
+list.hidden = false;
+wrap.classList.add("open");
+btn.setAttribute("aria-expanded", "true");
+setAct(native.selectedIndex);
+};
+const close = () => {
+if (list.hidden) return;
+list.hidden = true;
+wrap.classList.remove("open");
+btn.setAttribute("aria-expanded", "false");
+btn.removeAttribute("aria-activedescendant");
+};
+const choose = (i) => {
+if (native.selectedIndex !== i) {
+native.selectedIndex = i;
+native.dispatchEvent(new Event("change", { bubbles: true }));
+}
+sync();
+close();
+btn.focus();
+};
+btn.addEventListener("click", () => (list.hidden ? open() : close()));
+btn.addEventListener("keydown", (e) => {
+const isOpen = !list.hidden;
+const k = e.key;
+if (k === "ArrowDown" || k === "ArrowUp") {
+e.preventDefault();
+if (!isOpen) return open();
+setAct(act + (k === "ArrowDown" ? 1 : -1));
+} else if (k === "Home" && isOpen) { e.preventDefault(); setAct(0); }
+else if (k === "End" && isOpen) { e.preventDefault(); setAct(opts.length - 1); }
+else if ((k === "Enter" || k === " ") && isOpen) { e.preventDefault(); choose(act); }
+else if (k === "Escape" && isOpen) { e.preventDefault(); close(); }
+else if (k === "Tab") close();
+else if (k.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey && k !== " ") {
+const now = Date.now();
+typed = now - typedAt > 700 ? k.toLowerCase() : typed + k.toLowerCase();
+typedAt = now;
+const from = typed.length === 1 ? act + 1 : act;
+const hit = opts.findIndex((li, i) => i >= from && li.textContent.toLowerCase().startsWith(typed));
+const any = hit !== -1 ? hit : opts.findIndex((li) => li.textContent.toLowerCase().startsWith(typed));
+if (any !== -1) { if (!isOpen) open(); setAct(any); }
+}
+});
+list.addEventListener("mousedown", (e) => e.preventDefault());
+list.addEventListener("mousemove", (e) => { const i = opts.indexOf(e.target.closest(".sel-opt")); if (i !== -1 && i !== act) setAct(i); });
+list.addEventListener("click", (e) => { const i = opts.indexOf(e.target.closest(".sel-opt")); if (i !== -1) choose(i); });
+document.addEventListener("click", (e) => { if (!wrap.contains(e.target)) close(); });
+native.classList.add("sel-native");
+native.tabIndex = -1;
+native.setAttribute("aria-hidden", "true");
+native.parentNode.insertBefore(wrap, native);
+wrap.append(native, btn, list);
+sync();
+});
+})();</script><script>(() => {
+const T0 = Date.now();
+const $ = (s, r = document) => r.querySelector(s);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const safeUrl = (u) => /^(https?:\/\/|data:(image|video|audio)\/)/i.test(String(u || "")) ? u : "";
+const main = $("main[data-tool]"); if (!main) return;
+const tool = main.dataset.tool, kind = main.dataset.kind, out = $("#out"), form = $("#f"), go = $("#go");
+const readImage = (file) => new Promise((ok, no) => { const r = new FileReader(); r.onload = () => ok(r.result); r.onerror = () => no(new Error("Gagal membaca file")); r.readAsDataURL(file); });
+async function payload() {
+const v = (id) => ($("#" + id) ? $("#" + id).value.trim() : "");
+if (kind === "url") return { url: v("q"), format: v("format") || undefined, provider: v("provider") || "auto" };
+if (kind === "username") return { username: v("q") };
+if (kind === "image") {
+const f = $("#img").files[0]; if (!f) throw new Error("Pilih gambar dulu");
+if (f.size > 3 * 1024 * 1024) throw new Error("Ukuran gambar maksimal 3MB");
+return { image: await readImage(f), mode: v("mode"), scale: v("scale") };
+}
+if (tool === "emojimix") return { emoji: v("q") };
+if (tool === "brat") return { text: v("q") };
+return { query: v("q"), quality: v("quality") || undefined };
+}
+function fail(msg, detail) {
+out.replaceChildren(); const c = el("div", "card err"); c.append(el("b", "", "❌ Gagal: "), document.createTextNode(msg));
+if (detail && detail.length) { const p = el("p", "meta", detail.join(" · ")); c.append(p); }
+out.append(c);
+}
+function render(d) {
+const r = d.result || d.data || {}; out.replaceChildren();
+const c = el("div", "card res");
+const media = el("div");
+if (r.video && safeUrl(r.video)) { const v = el("video"); v.controls = true; v.src = r.video; media.append(v); }
+else if (safeUrl(r.thumbnail)) { const i = el("img"); i.alt = "Preview"; i.referrerPolicy = "no-referrer"; i.src = r.thumbnail; media.append(i); }
+const info = el("div");
+info.append(el("h2", "", r.title || "Hasil"));
+const who = r.author && (r.author.name || r.author.username || (typeof r.author === "string" ? r.author : ""));
+const bits = [r.type, who, d.provider && "via " + d.provider].filter(Boolean);
+if (bits.length) info.append(el("p", "meta", bits.join(" · ")));
+if (r.fields) { const t = el("table", "kv"); Object.entries(r.fields).forEach(([k, val]) => { const tr = el("tr"); tr.append(el("td", "", k), el("td", "", val)); t.append(tr); }); info.append(t); }
+const list = Array.isArray(r.downloads) ? r.downloads : [];
+list.forEach((x, i) => {
+const u = safeUrl(x.url || x.link); if (!u) return;
+const a = el("a", "btn dl", "📥 " + ([x.type, x.quality || x.label].filter(Boolean).join(" ") || "Download " + (i + 1)));
+a.href = u; a.target = "_blank"; a.rel = "noopener noreferrer";
+if (u.startsWith("data:")) a.download = x.filename || "hasil"; info.append(a);
+});
+if (!list.length && !r.fields) info.append(el("p", "meta", "Tidak ada link download di hasil. Coba link lain."));
+c.append(media, info); out.append(c);
+}
+form.addEventListener("submit", async (e) => {
+e.preventDefault(); go.disabled = true; out.replaceChildren(el("div", "card load", "Sedang memproses"));
+try {
+const body = await payload();
+const res = await fetch("/api/" + tool, { method: "POST", headers: { "Content-Type": "application/json", "X-Requested-With": "nyr-tools" }, body: JSON.stringify(Object.assign(body, { _hp: ($("#hp-field") || {}).value || "", _t: Date.now() - T0 })) });
+const d = await res.json().catch(() => ({}));
+if (!res.ok || d.status === false) return fail(d.message || "Terjadi kesalahan (" + res.status + ")", d.detail);
+render(d);
+} catch (err) { fail(err.message || "Koneksi bermasalah"); }
+finally { go.disabled = false; }
+});
+})();</script></body></html>
