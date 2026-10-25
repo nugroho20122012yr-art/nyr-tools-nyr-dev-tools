@@ -1,0 +1,4 @@
+{
+  "hosts": ["nyr-tools-nyr-dev-tools.vercel.app"],
+  "allowLocalhost": true
+}
